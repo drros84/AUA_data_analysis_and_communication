@@ -191,7 +191,7 @@ question("How many rows and columns does the mtcars dataframe have?",
 )
 ```
 
-```{r dim_quiz, echo = FALSE}
+```{r dim_quiz2, echo = FALSE}
 question("What is the third variable name?",
          answer("vs"),
          answer("gear"),
@@ -807,6 +807,7 @@ mtcars %>%
   group_by(cat_car) %>% 
   mutate(min_hp = min(hp)) %>% 
   ungroup() %>% 
-  filter(hp == min_hp) 
+  filter(hp == min_hp) %>% 
+  select(car, hp)
   
 ```
